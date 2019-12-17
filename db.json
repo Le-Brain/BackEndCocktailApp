@@ -1,0 +1,103 @@
+{
+  "users": [
+    {
+      "userId": "1",
+      "username": "firstUser",
+      "favoriteRecipesOfUser": [
+        "xmgD8tfO"
+      ]
+    },
+    {
+      "userId": "2",
+      "username": "secondUser",
+      "favoriteRecipesOfUser": [
+        "NR1vdlxM"
+      ]
+    },
+    {
+      "userId": "3",
+      "username": "thirdUser",
+      "favoriteRecipesOfUser": [
+        "xmgD8tfO"
+      ]
+    }
+  ],
+  "recipes": [
+    {
+      "idDrink": "xmgD8tfO",
+      "userId": "2",
+      "strDrink": "Recipe2",
+      "strCategory": "Recipe2",
+      "strAlcoholic": "Recipe2",
+      "strGlass": "Recipe2",
+      "strInstructions": "Recipe2",
+      "strDrinkThumb": "http://localhost:8080/1576515946871.png",
+      "strIngredient1": "Recipe2",
+      "strIngredient2": "Recipe2",
+      "strIngredient3": "",
+      "strIngredient4": "",
+      "strIngredient5": "",
+      "strIngredient6": "",
+      "strIngredient7": "",
+      "strMeasure1": "Recipe2",
+      "strMeasure2": "Recipe2",
+      "strMeasure3": "",
+      "strMeasure4": "",
+      "strMeasure5": "",
+      "strMeasure6": "",
+      "strMeasure7": "",
+      "dateModified": "2019-12-17 0:5:46"
+    },
+    {
+      "idDrink": "NR1vdlxM",
+      "userId": "1",
+      "strDrink": "Orange juice smash",
+      "strCategory": "Orange juice smash",
+      "strAlcoholic": "Orange juice smash",
+      "strGlass": "Orange juice smash",
+      "strInstructions": "Orange juice smash",
+      "strDrinkThumb": "http://localhost:8080/1576565283784.png",
+      "strIngredient1": "Orange juice smash",
+      "strIngredient2": "Orange juice smash",
+      "strIngredient3": "",
+      "strIngredient4": "",
+      "strIngredient5": "",
+      "strIngredient6": "",
+      "strIngredient7": "",
+      "strMeasure1": "Orange juice smash",
+      "strMeasure2": "Orange juice smash",
+      "strMeasure3": "",
+      "strMeasure4": "",
+      "strMeasure5": "",
+      "strMeasure6": "",
+      "strMeasure7": "",
+      "dateModified": "2019-12-17 13:48:3"
+    },
+    {
+      "idDrink": "9lPRi_Ou",
+      "userId": "2",
+      "strDrink": "SecondUser",
+      "strCategory": "SecondUser",
+      "strAlcoholic": "SecondUser",
+      "strGlass": "SecondUser",
+      "strInstructions": "SecondUser",
+      "strDrinkThumb": "http://localhost:8080/1576567421571.png",
+      "strIngredient1": "SecondUser",
+      "strIngredient2": "SecondUser",
+      "strIngredient3": "",
+      "strIngredient4": "",
+      "strIngredient5": "",
+      "strIngredient6": "",
+      "strIngredient7": "",
+      "strMeasure1": "SecondUser",
+      "strMeasure2": "SecondUser",
+      "strMeasure3": "",
+      "strMeasure4": "",
+      "strMeasure5": "",
+      "strMeasure6": "",
+      "strMeasure7": "",
+      "dateModified": "2019-12-17 14:23:41"
+    }
+  ],
+  "tasks": []
+}
