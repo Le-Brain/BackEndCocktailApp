@@ -29,60 +29,67 @@ const getUserByUserId = (req, res, next) => {
 };
 
 const getFavoriteRecipesByUserId = (req, res, next) => {
-  var Favoriterecipes = [];
-  const { userId } = req.params;
-  const user = db.get('users').find({ userId }).value();
-  if (!user) {
-    throw new Error('USER_NOT_FOUND');
-  }
-  for (let i = 0; i < user.favoriteRecipesOfUser.length; i++) {
-    Favoriterecipes.push(
-      db.get('recipes').find((element) => {
-        if (element.idDrink === user.favoriteRecipesOfUser[i]) return element;
-      })
-    );
-  }
-
-  res.json({ status: 'OK', data: Favoriterecipes });
+  setTimeout(() => {
+    var Favoriterecipes = [];
+    const { userId } = req.params;
+    const user = db.get('users').find({ userId }).value();
+    if (!user) {
+      throw new Error('USER_NOT_FOUND');
+    }
+    for (let i = 0; i < user.favoriteRecipesOfUser.length; i++) {
+      Favoriterecipes.push(
+        db.get('recipes').find((element) => {
+          if (element.idDrink === user.favoriteRecipesOfUser[i]) return element;
+        })
+      );
+    }
+    res.json({ status: 'OK', data: Favoriterecipes });
+  }, 1000);
 };
 
 const addToFavoriteRecipesByUserId = (req, res, next) => {
-  const { userId, recipeId } = req.body;
-  const user = db.get('users').find({ userId }).value();
-  if (!user) {
-    throw new Error('USER_NOT_FOUND');
-  }
-  user.favoriteRecipesOfUser.push(recipeId);
-  db.write();
-  res.json({ status: 'OK', data: user });
+  setTimeout(() => {
+    const { userId, recipeId } = req.body;
+    const user = db.get('users').find({ userId }).value();
+    if (!user) {
+      throw new Error('USER_NOT_FOUND');
+    }
+    user.favoriteRecipesOfUser.push(recipeId);
+    db.write();
+    res.json({ status: 'OK', data: user });
+  }, 1000);
 };
 
 const deleteFromFavoriteRecipesByUserId = (req, res, next) => { // Удаление конкретного избранного рецепта у конкретного пользователя
-  const { userId, recipeId } = req.body;
-  const user = db.get('users').find({ userId }).value();
-  if (!user) {
-    throw new Error('USER_NOT_FOUND');
-  }
-  const index = user.favoriteRecipesOfUser.indexOf(recipeId);
-  user.favoriteRecipesOfUser.splice(index, 1);
-  db.write();
-  res.json({ status: 'OK', data: user });
+  setTimeout(() => {
+    const { userId, recipeId } = req.body;
+    const user = db.get('users').find({ userId }).value();
+    if (!user) {
+      throw new Error('USER_NOT_FOUND');
+    }
+    const index = user.favoriteRecipesOfUser.indexOf(recipeId);
+    user.favoriteRecipesOfUser.splice(index, 1);
+    db.write();
+    res.json({ status: 'OK', data: user });
+  }, 1000);
 };
 
 const deleteFromFavoriteRecipesByRecipeId = (req, res, next) => { // Удаление рецепта во всех избранных рецептах пользователей
-  const { idDrink } = req.params;
-  const users = db.get('users');
-  (function (idDrink, users) {
-    users.value().map((item) => {
-      for (let i = 0; i < item.favoriteRecipesOfUser.length; i++) {
-        if (item.favoriteRecipesOfUser[i] === idDrink) {
-          item.favoriteRecipesOfUser.splice(i, 1);
-          db.write();
+  setTimeout(() => {
+    const { idDrink } = req.params;
+    const users = db.get('users');
+    (function (idDrink, users) {
+      users.value().map((item) => {
+        for (let i = 0; i < item.favoriteRecipesOfUser.length; i++) {
+          if (item.favoriteRecipesOfUser[i] === idDrink) {
+            item.favoriteRecipesOfUser.splice(i, 1);
+            db.write();
+          }
         }
-      }
-    });
-  }(idDrink, users));
-  res.json({ status: 'OK' });
+      });
+    }(idDrink, users));
+    res.json({ status: 'OK' });
+  }, 1000);
 };
 
 module.exports = {
