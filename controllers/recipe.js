@@ -157,9 +157,9 @@ const createRecipe = (req, res, next) => {
 const editRecipe = (req, res, next) => {
   setTimeout(() => {
     const { idDrink } = req.params;
-    const editedTask = db.get('recipes').find({ idDrink }).assign(req.body).value();
+    const editedRecipe = db.get('recipes').find({ idDrink }).assign(req.body).value();
     db.write();
-    res.json({ status: 'OK', data: editedTask });
+    res.json({ status: 'OK', data: editedRecipe });
   }, 1000);
 };
 

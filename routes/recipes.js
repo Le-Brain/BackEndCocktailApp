@@ -39,7 +39,7 @@ router.get('/ofuser/:userId', recipesController.getRecipesByUserId);
 router.post('/', upload.single('userFile'), recipesController.createRecipe);
 
 // PATCH /tasks/:id
-// router.patch('/:id', tasksController.editTask);
+router.patch('/:idDrink', recipesController.editRecipe);
 
 // DELETE /recipes/:idDrink
 router.delete('/:idDrink', recipesController.deleteRecipe);

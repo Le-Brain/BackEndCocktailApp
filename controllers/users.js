@@ -51,16 +51,24 @@ const addToFavoriteRecipesByUserId = (req, res, next) => {
   setTimeout(() => {
     const { userId, recipeId } = req.body;
     const user = db.get('users').find({ userId }).value();
+    let founded = false;
     if (!user) {
       throw new Error('USER_NOT_FOUND');
     }
-    user.favoriteRecipesOfUser.push(recipeId);
-    db.write();
-    res.json({ status: 'OK', data: user });
+    user.favoriteRecipesOfUser.forEach((elem) => {
+      if (elem === recipeId) founded = true;
+    });
+    if (founded === false) {
+      user.favoriteRecipesOfUser.push(recipeId);
+      db.write();
+      res.json({ status: 'OK', data: user, message: '' });
+    } else {
+      res.json({ status: 'OK', data: user, message: 'USER_ALREADY_HAVE_RECIPE' });
+    }
   }, 1000);
 };
 
-const deleteFromFavoriteRecipesByUserId = (req, res, next) => { // Удаление конкретного избранного рецепта у конкретного пользователя
+const deleteFromFavoriteRecipesByUserId = (req, res, next) => {
   setTimeout(() => {
     const { userId, recipeId } = req.body;
     const user = db.get('users').find({ userId }).value();
@@ -74,7 +82,7 @@ const deleteFromFavoriteRecipesByUserId = (req, res, next) => { // Удален�
   }, 1000);
 };
 
-const deleteFromFavoriteRecipesByRecipeId = (req, res, next) => { // Удаление рецепта во всех избранных рецептах пользователей
+const deleteFromFavoriteRecipesByRecipeId = (req, res, next) => {
   setTimeout(() => {
     const { idDrink } = req.params;
     const users = db.get('users');
