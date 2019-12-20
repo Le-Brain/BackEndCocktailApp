@@ -4,7 +4,8 @@
       "userId": "1",
       "username": "firstUser",
       "favoriteRecipesOfUser": [
-        "xmgD8tfO"
+        "xmgD8tfO",
+        "nv_wHCIl"
       ]
     },
     {
@@ -19,7 +20,8 @@
       "userId": "3",
       "username": "thirdUser",
       "favoriteRecipesOfUser": [
-        "xmgD8tfO"
+        "navXRG4w",
+        "nv_wHCIl"
       ]
     }
   ],
@@ -32,22 +34,22 @@
       "strAlcoholic": "Recipe22",
       "strGlass": "Recipe22",
       "strInstructions": "Recipe22",
-      "strDrinkThumb": "http://localhost:8080/1576778930094.png",
+      "strDrinkThumb": "http://localhost:8080/1576820087619.png",
       "strIngredient1": "Recipe22",
       "strIngredient2": "Recipe22",
       "strIngredient3": "Recipe22",
       "strIngredient4": "MynewRecipe",
-      "strIngredient5": "",
+      "strIngredient5": "Ingr5",
       "strIngredient6": "",
       "strIngredient7": "",
       "strMeasure1": "Recipe22",
       "strMeasure2": "Recipe22",
       "strMeasure3": "Recipe22",
       "strMeasure4": "NewMeasure",
-      "strMeasure5": "",
+      "strMeasure5": "Ingr5",
       "strMeasure6": "",
       "strMeasure7": "",
-      "dateModified": "2019-12-20 1:8:50"
+      "dateModified": "2019-12-20 12:34:47"
     },
     {
       "idDrink": "NR1vdlxM",
@@ -57,22 +59,22 @@
       "strAlcoholic": "Orange juice smash",
       "strGlass": "Orange juice smash",
       "strInstructions": "Orange juice smash",
-      "strDrinkThumb": "http://localhost:8080/1576565283784.png",
+      "strDrinkThumb": "http://localhost:8080/1576825515093.png",
       "strIngredient1": "Orange juice smash",
       "strIngredient2": "Orange juice smash",
-      "strIngredient3": "",
-      "strIngredient4": "",
+      "strIngredient3": "Ingredient3",
+      "strIngredient4": "21",
       "strIngredient5": "",
       "strIngredient6": "",
       "strIngredient7": "",
       "strMeasure1": "Orange juice smash",
       "strMeasure2": "Orange juice smash",
-      "strMeasure3": "",
-      "strMeasure4": "",
+      "strMeasure3": "Ingredient3",
+      "strMeasure4": "21",
       "strMeasure5": "",
       "strMeasure6": "",
       "strMeasure7": "",
-      "dateModified": "2019-12-17 13:48:3"
+      "dateModified": "2019-12-20 14:5:15"
     },
     {
       "idDrink": "9lPRi_Ou",
@@ -173,6 +175,56 @@
       "strMeasure6": "",
       "strMeasure7": "",
       "dateModified": "2019-12-18 18:47:30"
+    },
+    {
+      "idDrink": "qtcJwWK9",
+      "userId": "2",
+      "strDrink": "MyNewRecipe",
+      "strCategory": "MyNewRecipe",
+      "strAlcoholic": "MyNewRecipe",
+      "strGlass": "MyNewRecipe",
+      "strInstructions": "MyNewRecipe",
+      "strDrinkThumb": "http://localhost:8080/1576820139670.png",
+      "strIngredient1": "MyNewRecipe",
+      "strIngredient2": "MyNewRecipe",
+      "strIngredient3": "",
+      "strIngredient4": "",
+      "strIngredient5": "",
+      "strIngredient6": "",
+      "strIngredient7": "",
+      "strMeasure1": "MyNewRecipe",
+      "strMeasure2": "MyNewRecipe",
+      "strMeasure3": "",
+      "strMeasure4": "",
+      "strMeasure5": "",
+      "strMeasure6": "",
+      "strMeasure7": "",
+      "dateModified": "2019-12-20 12:35:39"
+    },
+    {
+      "idDrink": "navXRG4w",
+      "userId": "1",
+      "strDrink": "Manhattan",
+      "strCategory": "Ordinary Drink",
+      "strAlcoholic": "Alcoholic",
+      "strGlass": "Ordinary",
+      "strInstructions": "Mix all",
+      "strDrinkThumb": "http://localhost:8080/1576825666792.png",
+      "strIngredient1": "Whiskey",
+      "strIngredient2": "Red Vermut",
+      "strIngredient3": "",
+      "strIngredient4": "",
+      "strIngredient5": "",
+      "strIngredient6": "",
+      "strIngredient7": "",
+      "strMeasure1": "50ml",
+      "strMeasure2": "20ml",
+      "strMeasure3": "",
+      "strMeasure4": "",
+      "strMeasure5": "",
+      "strMeasure6": "",
+      "strMeasure7": "",
+      "dateModified": "2019-12-20 14:7:46"
     }
   ],
   "tasks": []
